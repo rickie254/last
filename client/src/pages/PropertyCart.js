@@ -14,7 +14,7 @@ const PropertyCart = () => {
     const handleGetProperty = async () => {
       //   console.log(propertyId);
       let response = await fetch(
-        `http://localhost:3000/properties/${propertyId}`
+        `https://arasaka-api.herokuapp.com/properties/${propertyId}`
       );
       response = await response.json();
       //   await console.log(response);
@@ -32,7 +32,7 @@ const PropertyCart = () => {
       name: cartItem.property_name,
     };
     // console.log(addPurchase);
-    let response = await fetch("http://localhost:3000/purchases", {
+    let response = await fetch("https://arasaka-api.herokuapp.com/purchases", {
       method: "POST",
       headers: {
         "content-type": "application/json",
