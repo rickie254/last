@@ -39,7 +39,7 @@ const Login = () => {
       email: login.email,
       password: login.password,
     };
-    let find = await fetch("http://localhost:3000/login", {
+    let find = await fetch("https://arasaka-api.herokuapp.com/login", {
       method: "POST",
       headers: {
         "content-type": "application/json",
