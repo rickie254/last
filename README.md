@@ -2,7 +2,7 @@
 - a real estate web application where users can browse and purchase property online.
 
 ## Link to Frontend
-https://medicalfront.herokuapp.com/
+https://arasaka-real-estate.vercel.app/
 
 ## Basic Information.
 - As a user of the application, you will be able to do the following:
