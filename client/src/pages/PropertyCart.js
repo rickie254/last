@@ -14,7 +14,7 @@ const PropertyCart = () => {
     const handleGetProperty = async () => {
       //   console.log(propertyId);
       let response = await fetch(
-        `https://arasaka-api.herokuapp.com/properties/${propertyId}`
+        `http://localhost:3000/properties/${propertyId}`
       );
       response = await response.json();
       //   await console.log(response);
@@ -32,13 +32,14 @@ const PropertyCart = () => {
       name: cartItem.property_name,
     };
     // console.log(addPurchase);
-    let response = await fetch("https://arasaka-api.herokuapp.com/purchases", {
+    let response = await fetch("http://localhost:3000/purchases", {
       method: "POST",
       headers: {
         "content-type": "application/json",
       },
       body: JSON.stringify(addPurchase),
     });
+    navigate("/purchase");
     console.log("purchased");
   };
 
@@ -53,7 +54,7 @@ const PropertyCart = () => {
   return (
     <div className="bg-indigo-50 flex flex-col items-center md:h-[800px]">
       <Navbar />
-      <div className="mt-[30px] bg-white max-w-[1000px] w-[100%] md:h-[600px] h-[100%] rounded-lg">
+      <div className="mt-[30px] bg-white max-w-[1000px] w-[100%] md:h-[600px] h-[100%] rounded-lg mt-[80px]">
         <h1 className="font-work font-bold text-3xl p-5">Property Cart</h1>
         <div className="flex flex-col items-center md:flex-row md:justify-around md:h-[500px] ">
           <div className="max-w-[500px] w-[100%]">

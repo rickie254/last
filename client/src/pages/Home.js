@@ -2,8 +2,36 @@ import house from "../house.svg"
 import HeroSection from "../components/HeroSection";
 import Navbar from "../components/Navbar";
 import MobileNav from "../components/MobileNav";
+import { useEffect, useContext } from "react";
+import { AppContext } from "../contexts/AppContext";
 
 const Home = () => {
+
+  const { user, setUser, isLoggedIn, setIsLoggedIn, changedState, setDisabled } = useContext(AppContext);
+
+  useEffect(() => {
+    // fetch("https://arasaka-api.herokuapp.com/me")
+    // .then((response) => {
+    //   if (response.ok) {
+    //     response.json()
+    //     .then((user) => {
+    //       console.log(user)
+    //       setUser(user)
+    //       setIsLoggedIn(true)
+    //     });
+    //   }
+    // });
+    const userInfo = JSON.parse(localStorage.getItem('user'))
+    // console.log(userInfo)
+    if(userInfo){
+      setUser(userInfo);
+      setIsLoggedIn(true);
+      setDisabled(false);
+    }
+  }, [changedState]);
+
+  // console.log(user)
+
   return (
     <div>
       <Navbar />

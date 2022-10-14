@@ -13,7 +13,7 @@ const SelectedProperty = () => {
     const handleGetProperty = async () => {
       console.log(propertyId);
       let response = await fetch(
-        `https://arasaka-api.herokuapp.com/properties/${propertyId}`
+        `http://localhost:3000/properties/${propertyId}`
       );
       response = await response.json();
       await console.log(response);

@@ -14,6 +14,7 @@ const Signup = () => {
   })
   const navigate = useNavigate()
   const { user, setUser, isLoggedIn, setIsLoggedIn, setDisabled } = useContext(AppContext);
+  const [ showError, setShowError ] = useState(false);
 
   const handleNavigate = () =>{
     navigate("/login");
@@ -34,20 +35,25 @@ const Signup = () => {
       email: login.email,
       password: login.password,
     };
-    let response  = await fetch("https://arasaka-api.herokuapp.com/users",{
+    let find  = await fetch("http://localhost:3000/users",{
       method:"POST",
       headers:{
         "content-type":"application/json"
       },
       body:JSON.stringify(addUser),
     });
-    response = await response.json();
-    // console.log(response);
-    if(response){
-      setUser(response);
+    let data = await find.json();
+    console.log(data);
+    console.log(find.ok);
+    if(find.ok){
+      setUser(data);
       setIsLoggedIn(true)
       setDisabled(false);
+      localStorage.setItem('user', JSON.stringify(data))
       navigate("/")
+    }
+    else{
+      setShowError(true);
     }
     // console.log("user created");
   }
@@ -163,7 +169,7 @@ const Signup = () => {
                     htmlFor="myInput"
                     className="text-sm font-medium leading-none text-red-700 "
                   >
-                    Please Sign Up if you have an account
+                    Please Sign Up if you don't have an account
                   </label>
                 </div>
                 <div
@@ -172,9 +178,10 @@ const Signup = () => {
                 >
                   <label
                     htmlFor="myInput"
-                    className="text-sm font-medium leading-none text-red-700 "
+                    className="text-sm font-medium leading-none text-red-700 p-2"
+                    style={showError?{display:"block"}:{display:"none"}}
                   >
-                    Incorrect Sign Up 
+                    your login information may be too short or wrong
                   </label>
                 </div>
                 <div className="mt-2">

@@ -1,7 +1,7 @@
 // import logo from '../logo.svg';
 import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Home from "../pages/Home";
 import Signup from "../pages/Signup";
 import Login from "../pages/Login";
@@ -12,15 +12,30 @@ import SelectedProperty from "../pages/SelectedProperty";
 import PropertyCart from "../pages/PropertyCart";
 
 function App() {
+  const [user, setUser] = useState("Friend");
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [disabled, setDisabled] = useState(true);
+  const [propertyId, setPropertyId] = useState(1);
+  const [ changedState, setChangeState ] = useState(false)
 
-  const [ user, setUser ] = useState("Friend");
-  const [ isLoggedIn, setIsLoggedIn ] = useState(false);
-  const [ disabled, setDisabled ] = useState(true);
-  const [ propertyId, setPropertyId ] = useState(1);
+
 
   return (
     <div className="App">
-      <AppContext.Provider value={{user, setUser, isLoggedIn, setIsLoggedIn, propertyId, setPropertyId, disabled, setDisabled }}>
+      <AppContext.Provider
+        value={{
+          user,
+          setUser,
+          isLoggedIn,
+          setIsLoggedIn,
+          propertyId,
+          setPropertyId,
+          disabled,
+          setDisabled,
+          changedState,
+          setChangeState
+        }}
+      >
         <Router>
           <Routes>
             <Route path="/" element={<Home />} />

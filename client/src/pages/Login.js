@@ -13,7 +13,8 @@ const Login = () => {
   });
 
   const navigate = useNavigate();
-  const { user, setUser, isLoggedIn, setIsLoggedIn, setDisabled } = useContext(AppContext);
+  const { user, setUser, isLoggedIn, setIsLoggedIn, setDisabled, changedState, setChangedState } = useContext(AppContext);
+  const [ showError, setShowError ] = useState(false);
 
   const handleNavigate = () => {
     navigate("/signup");
@@ -38,20 +39,26 @@ const Login = () => {
       email: login.email,
       password: login.password,
     };
-    let response = await fetch("https://arasaka-api.herokuapp.com/login", {
+    let find = await fetch("http://localhost:3000/login", {
       method: "POST",
       headers: {
         "content-type": "application/json",
       },
       body: JSON.stringify(addUser),
     });
-    response = await response.json();
-    // console.log(response)
-    response ? setIsLoggedIn(true) : setIsLoggedIn(false);
-    if (isLoggedIn) {
-      setUser(response);
+    let data = await find.json();
+    await console.log(data)
+    await console.log(find.ok)
+    // response ?  : setIsLoggedIn(false);
+    if (find.ok) {
+      setIsLoggedIn(true)
+      setUser(data);
       setDisabled(false);
+      localStorage.setItem('user', JSON.stringify(data))
       navigate("/");
+    }
+    else{
+      setShowError(true);
     }
   };
 
@@ -181,9 +188,10 @@ const Login = () => {
                 >
                   <label
                     htmlFor="myInput"
-                    className="text-sm font-medium leading-none text-red-700 "
+                    className="text-sm font-medium leading-none text-red-700 p-2"
+                    style={showError?{display:"block"}:{display:"none"}}
                   >
-                    Incorrect Login
+                    could not identify user, try again
                   </label>
                 </div>
                 <div className="mt-2">
