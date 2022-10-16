@@ -3,8 +3,11 @@
 
 ## Requirements
 Ruby 2.7.4
+
 NodeJS (v16), and npm
+
 Heroku CLI
+
 Postgresql
 
 See Environment Setup below for instructions on installing these tools if you don't already have them.
@@ -16,83 +19,71 @@ git clone git@github.com:rickie254/last.git
 When you're ready to start building your project, run:
 
 bundle install
-rails db:create
+rails db:create 
 npm install --prefix client
+
 You can use the following commands to run the application
 rails s for backend
-## Link to Frontend
-https://arasaka-real-estate.vercel.app/
+npm start --prefix client: run the frontend
 
-## Basic Information.
-- As a user of the application, you will be able to do the following:
-   - A user can view and browse through  various property listings.
-   - A user can sign up and log in to the application.
-   - A user can filter through various categories of property listings.
-   - A user can purchase property or cancel a purchase.
+## Environment Setup
+Install the Latest Ruby Version
+Verify which version of Ruby you're running by entering this in the terminal:
 
-## Tecnologies & Languages
+ruby -v
+If it's not, you can use rvm to install a newer version of Ruby:
 
-- [Ruby](https://www.ruby-lang.org/en/)
-- [Ruby on Rails Framework](https://rubyonrails.org/)
-- [React](https://reactjs.org/)
-- [Tailwind CSS](https://v2.tailwindcss.com/docs/installation)
+rvm install 2.7.4 --default
+You should also install the latest versions of bundler and rails:
 
-# Installation and Setup
+gem install bundler
+gem install rails
+Install NodeJS
+Verify you are running a recent version of Node with:
 
-Clone the repository below
+node -v
+If your Node version is not 16.x.x, install it and set it as the current and default version with:
 
-```
-git clone https://github.com/anthonykimani/arasaka-real-estate.git
-```
+nvm install 16
+nvm use 16
+nvm alias default 16
+You can also update your npm version with:
 
-### Install required Dependencies
+npm i -g npm
+Sign Up for a [Heroku Account][heroku signup]
+You can sign up at for a free account at [https://signup.heroku.com/devcenter][heroku signup].
 
-    - run ` bundle install ` to install ruby dependencies
-    - run ` npm install --prefix client ` to install node dependencies
+Install Postgresql
+Heroku requires that you use PostgreSQL for your database instead of SQLite. PostgreSQL (or just Postgres for short) is an advanced database management system with more features than SQLite. If you don't already have it installed, you'll need to set it up.
 
-## Running the application
+PostgreSQL Installation for WSL
+To install Postgres for WSL, run the following commands from your Ubuntu terminal:
 
-```bash
-$ rails db:migrate db:seed
-```
- Open Terminal and type
-To run the api 
-```
-$ rails server
-```
+sudo apt update
+sudo apt install postgresql postgresql-contrib libpq-dev
+Then confirm that Postgres was installed successfully:
 
- then type
-To run the client server
-```
-$ npm start --prefix client
-```
+psql --version
+Run this command to start the Postgres service:
 
-## The following endpoints will be available:
-- The base url is `http://localhost:3000/` you can then add the below endpoints i.e
-      - http://localhost:3000/purchases
-      
-## Endpoints Available
-```
-- Below are a list of available endpoints in the application.This are the endpoints that our web and mobile applications are     going to consume.
-- The images below show how you can access the specific endpoints listed  below.
-```
-      
-| Method | Endpoint                             | Description                           |
-| ------ | -------------------------------      | ------------------------------------- |
-| GET    | http://localhost:3000/properties     | return a list of properties           | 
-| GET    | http://localhost:3000/properties/:id | show a specific property              | 
-| POST   | http://localhost:3000/properties     | create a property                     | 
-| DELETE | http://localhost:3000/properties/:id | delete a property                     |
-| UPDATE | http://localhost:3000/properties/:id | update a property                     | 
-| GET    | http://localhost:3000/users          | return a list of users                | 
-| GET    | http://localhost:3000/users/:id      | show a specific user                  | 
-| POST   | http://localhost:3000/users          | create a user                         | 
-| DELETE | http://localhost:3000/users/:id      | delete a user                         |
-| UPDATE | http://localhost:3000/users/:id      | update a user                         | 
-| GET    | http://localhost:3000/purchases      | return a list of purchases            | 
-| GET    | http://localhost:3000/purchases/:id  | show a specific purchases             | 
-| POST   | http://localhost:3000/purchases      | create a purchase                     | 
-| DELETE | http://localhost:3000/purchases/:id  | delete a purchase                     |
-| UPDATE | http://localhost:3000/purchases/:id  | update a purchase                     | 
+sudo service postgresql start
+Finally, you'll also need to create a database user so that you are able to connect to the database from Rails. First, check what your operating system username is:
 
-# last
+whoami
+If your username is "ian", for example, you'd need to create a Postgres user with that same name. To do so, run this command to open the Postgres CLI:
+
+sudo -u postgres -i
+From the Postgres CLI, run this command (replacing "ian" with your username):
+
+createuser -sr rickie
+Then enter control + d or type logout to exit.
+
+This guide has more info on setting up Postgres on WSL if you get stuck.
+
+Postgresql Installation for OSX
+To install Postgres for OSX, you can use Homebrew:
+
+brew install postgresql
+Once Postgres has been installed, run this command to start the Postgres service:
+
+brew services start postgresql
