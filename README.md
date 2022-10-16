@@ -18,6 +18,8 @@ When you're ready to start building your project, run:
 bundle install
 rails db:create
 npm install --prefix client
+You can use the following commands to run the application
+rails s for backend
 ## Link to Frontend
 https://arasaka-real-estate.vercel.app/
 
