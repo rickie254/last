@@ -25,7 +25,7 @@ const FilterProperty = () => {
             <button onClick={()=>handleFilter("single-room")} className="bg-white text-black font-open shadow-lg p-1 mx-1 rounded cursor-pointer hover:bg-black hover:text-white min-w-[150px] max-h-[40px] ">single-room</button>
             <button onClick={()=>handleFilter("one_bedroom")} className="bg-white text-black font-open shadow-lg p-1 mx-1 rounded cursor-pointer hover:bg-black hover:text-white min-w-[150px] max-h-[40px] ">1 bedroom</button>
             <button onClick={()=>handleFilter("two_bedroom")} className="bg-white text-black font-open shadow-lg p-1 mx-1 rounded cursor-pointer hover:bg-black hover:text-white min-w-[150px] max-h-[40px] ">2 bedroom</button>
-            <button onClick={()=>handleFilter("double-room")} className="bg-white text-black font-open shadow-lg p-1 mx-1 rounded cursor-pointer hover:bg-black hover:text-white min-w-[150px] max-h-[40px] ">doubleroom</button>
+            <button onClick={()=>handleFilter("double-room")} className="bg-white text-black font-open shadow-lg p-1 mx-1 rounded cursor-pointer hover:bg-black hover:text-white min-w-[150px] max-h-[40px] ">double-room</button>
             <button onClick={()=>handleFilter("apartment")} className="bg-white text-black font-open shadow-lg p-1 mx-1 rounded cursor-pointer hover:bg-black hover:text-white min-w-[150px] max-h-[40px] ">apartment</button>
         </div>
      );
