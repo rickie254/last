@@ -15,7 +15,7 @@ See Environment Setup below for instructions on installing these tools if you do
 ## Setup
 Start by cloning (not forking) the project template repository and removing the remote:
 
-git clone git@github.com:rickie254/last.git
+git@github.com:rickie254/real-esteto.git
 When you're ready to start building your project, run:
 
 bundle install
