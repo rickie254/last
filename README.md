@@ -10,6 +10,9 @@ Postgresql
 See Environment Setup below for instructions on installing these tools if you don't already have them.
 
 ## Setup
+Start by cloning (not forking) the project template repository and removing the remote:
+
+git@github.com:rickie254/last.git
 ## Link to Frontend
 https://arasaka-real-estate.vercel.app/
 
