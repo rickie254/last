@@ -145,7 +145,7 @@ const Login = () => {
                   </label>
                   <input
                     id="email"
-                    aria-labelledby="email"
+                    aria-labelled-by="email"
                     name="email"
                     type="email"
                     className="bg-gray-100 border rounded text-xs font-medium leading-none placeholder-gray-800 text-gray-800 py-3 w-full pl-3 mt-2"
