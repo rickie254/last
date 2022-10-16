@@ -14,6 +14,10 @@ Start by cloning (not forking) the project template repository and removing the 
 
 git clone git@github.com:rickie254/last.git
 When you're ready to start building your project, run:
+
+bundle install
+rails db:create
+npm install --prefix client
 ## Link to Frontend
 https://arasaka-real-estate.vercel.app/
 
