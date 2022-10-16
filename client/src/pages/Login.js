@@ -127,7 +127,7 @@ const Login = () => {
                   </label>
                   <input
                     id="last-name"
-                    aria-labelledby="last-name"
+                    aria-labelled-by="last-name"
                     name="last_name"
                     type="text"
                     className="bg-gray-100 border rounded text-xs font-medium leading-none placeholder-gray-800 text-gray-800 py-3 w-full pl-3 mt-2"
