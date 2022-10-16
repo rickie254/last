@@ -86,4 +86,4 @@ To install Postgres for OSX, you can use Homebrew:
 brew install postgresql
 Once Postgres has been installed, run this command to start the Postgres service:
 
-brew services start postgresql
+<!-- brew services start postgresql -->
