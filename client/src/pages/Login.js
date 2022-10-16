@@ -101,7 +101,7 @@ const Login = () => {
               >
                 <div>
                   <label
-                    htmlFor="firstname"
+                    htmlFor="first-name"
                     className="text-sm font-medium leading-none text-gray-800 "
                   >
                     {" "}
