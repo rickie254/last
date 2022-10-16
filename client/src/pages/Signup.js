@@ -155,7 +155,7 @@ const Signup = () => {
                     <input
                       id="myInput"
                       name="password"
-                      //   type={showpass ? "text" : "password"}
+                      //   type={show-pass ? "text" : "password"}
                       className="bg-gray-100 border rounded text-xs font-medium leading-none text-gray-800 py-3 w-full pl-3 mt-2"
                       onChange={handleInput}
                     />
