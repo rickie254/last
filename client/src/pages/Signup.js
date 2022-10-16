@@ -91,7 +91,7 @@ const Signup = () => {
               <form onSubmit={handleSubmit} className="xxs:w-[250px] xsm:w-[400px] sm:w-[500px] md:w-[600px] lg:w-[300px] mt-5">
                 <div>
                   <label
-                    htmlFor="firstname"
+                    htmlFor="first-name"
                     className="text-sm font-medium leading-none text-gray-800 "
                   >
                     {" "}
