@@ -109,7 +109,7 @@ const Signup = () => {
                 </div>
                 <div className="mt-3 w-full">
                   <label
-                    htmlFor="lastname"
+                    htmlFor="last-name"
                     className="text-sm font-medium leading-none text-gray-800 "
                   >
                     {" "}
