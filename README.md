@@ -1,4 +1,4 @@
-##  Real Estate
+<!-- ##  Real Estate
 -it is a  real estate web application where users can look for properties according to their taste and liking online.
 
 ## Requirements
@@ -86,4 +86,4 @@ To install Postgres for OSX, you can use Homebrew:
 brew install postgresql
 Once Postgres has been installed, run this command to start the Postgres service:
 
-brew services start postgresql
+brew services start postgresql -->
