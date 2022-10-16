@@ -1,6 +1,15 @@
-## Arasaka Real Estate
-- a real estate web application where users can browse and purchase property online.
+##  Real Estate
+-it is a  real estate web application where users can look for properties according to their taste and liking online.
 
+## Requirements
+Ruby 2.7.4
+NodeJS (v16), and npm
+Heroku CLI
+Postgresql
+
+See Environment Setup below for instructions on installing these tools if you don't already have them.
+
+## Setup
 ## Link to Frontend
 https://arasaka-real-estate.vercel.app/
 
