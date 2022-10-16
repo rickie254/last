@@ -108,7 +108,7 @@ const Login = () => {
                     First Name{" "}
                   </label>
                   <input
-                    id="firstname"
+                    id="first-name"
                     aria-labelled-by="firstname"
                     name="first_name"
                     type="text"
