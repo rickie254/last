@@ -116,7 +116,7 @@ const Signup = () => {
                     Last Name{" "}
                   </label>
                   <input
-                    id="lastname"
+                    id="last-name"
                     aria-labelledby="last-name"
                     name="last_name"
                     type="text"
