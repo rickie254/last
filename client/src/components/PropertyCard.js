@@ -34,11 +34,11 @@ const PropertyCard = ({
             </div>
             <div>
               <button onClick={handleAddToCart} className="focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 text-sm font-bold leading-none text-white focus:outline-none bg-blue-500 border rounded hover:bg-blue-600 py-3 px-5 w-full font-work ">
-                Purchase
+                buy 
               </button>
             </div>
           </div>
-          <h4>*prices may vary</h4>
+          <h4>*prices can change due to seasons.</h4>
         </div>
       </div>
     </div>

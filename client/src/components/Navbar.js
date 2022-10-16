@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
     return ( 
         <div className="flex justify-around items-center bg-gray-50 shadow-lg font-open py-1 absolute top-0 z-10 w-[100%] max-w-screen">
-            <div className="">
-                <img src={process.env.PUBLIC_URL + "/arasaka_logo.png"} alt="" className="min-w-[150px] max-w-[150px] object-contain" />
-            </div>
-            <div className="">
+            {/* <div className="">
+                <img src={process.env.PUBLIC_URL + "/logo.jpg"} alt="" className="min-w-[150px] max-w-[150px] object-contain" />
+            </div> */}
+            <div className="nav">
                 <ul className="hidden sm:flex justify-around items-center font-bold">
                     <li className="px-2 text-xl text-gray-800"><Link to={"/"}>Home</Link></li>
                     <li className="px-2 text-xl text-gray-800"><Link to={"/property"}>Properties</Link></li>

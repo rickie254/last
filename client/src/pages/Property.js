@@ -14,7 +14,7 @@ const Property = () => {
   //fetching properties
   useEffect(() => {
     const getProperties = async () => {
-      let response = await fetch("https://arasaka-api.herokuapp.com/properties");
+      let response = await fetch("http://localhost:3000/properties");
       response = await response.json();
       // await console.log(response);
       setProperties(response);
@@ -37,7 +37,7 @@ const Property = () => {
       >
         <FilterProperty />
       </FilterContext.Provider>
-      <div className="mt-[30px] mx-2 max-w-[1100px] w-[100%] flex items-center flex-col md:grid md:grid-cols-2 lg:grid-cols-3 gap-3">
+      <div className="mt-[30px] mx-2 max-w-[1100px] w-[100%] flex items-center flex-col md:grid md:grid-cols-2 lg:grid-cols-1 gap-3">
         {filteredProperties.map((property) => (
           <DisplayPropertyCard
             id={property.id}

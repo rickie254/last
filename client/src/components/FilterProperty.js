@@ -19,7 +19,7 @@ const FilterProperty = () => {
     }
     
     return ( 
-        <div className="flex overflow-x-scroll list-none max-w-[1000px] w-[100%] mt-[70px]" id="scroll">
+        <div className="flex overflow-x-scroll list-none max-w-[1000px] vertical-align: baseline w-[100%] mt-[70px]" id="scroll">
             <button onClick={handleDefault} className="bg-white text-black font-open shadow-lg p-1 mx-1 rounded cursor-pointer hover:bg-black hover:text-white min-w-[150px] max-h-[40px] ">All</button>
             <button onClick={()=>handleFilter("bedsitter")} className="bg-white text-black font-open shadow-lg p-1 mx-1 rounded cursor-pointer hover:bg-black hover:text-white min-w-[150px] max-h-[40px] ">bedsitter</button>
             <button onClick={()=>handleFilter("singleroom")} className="bg-white text-black font-open shadow-lg p-1 mx-1 rounded cursor-pointer hover:bg-black hover:text-white min-w-[150px] max-h-[40px] ">singleroom</button>

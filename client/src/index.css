@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.nav {
+    margin-right: 590px;
+}
+
+.flex {
+    background-color: rgb(62, 172, 172);
+    
+}
+.overflow-x-scroll {
+    float: right;
+}
+.rounded {
+    background-color: black;
+}

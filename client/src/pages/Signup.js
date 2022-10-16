@@ -103,7 +103,7 @@ const Signup = () => {
                     name="first_name"
                     type="text"
                     className="bg-gray-100 border rounded text-xs font-medium leading-none placeholder-gray-800 text-gray-800 py-3 w-full pl-3 mt-2"
-                    placeholder="e.g: John"
+                    placeholder="e.g: ricky"
                     onChange={handleInput}
                   />
                 </div>
@@ -121,7 +121,7 @@ const Signup = () => {
                     name="last_name"
                     type="text"
                     className="bg-gray-100 border rounded text-xs font-medium leading-none placeholder-gray-800 text-gray-800 py-3 w-full pl-3 mt-2"
-                    placeholder="e.g: Doe "
+                    placeholder="e.g: ranxxs"
                     onChange={handleInput}
                   />
                 </div>
@@ -139,7 +139,7 @@ const Signup = () => {
                     name="email"
                     type="email"
                     className="bg-gray-100 border rounded text-xs font-medium leading-none placeholder-gray-800 text-gray-800 py-3 w-full pl-3 mt-2"
-                    placeholder="e.g: john@gmail.com "
+                    placeholder="e.g: ricky@gmail.com "
                     onChange={handleInput}
                   />
                 </div>
